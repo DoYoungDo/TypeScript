@@ -7,6 +7,6 @@ declare class X { }
 // @filename: b.ts
 export {X};
 export function f() {
-    var x: X;
+    declare var x: X;
     return x;
 } 

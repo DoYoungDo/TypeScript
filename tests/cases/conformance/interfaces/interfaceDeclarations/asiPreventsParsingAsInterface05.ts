@@ -1,6 +1,6 @@
 "use strict"
 
-var interface: number;
+declare var interface: number;
 
 // 'interface' is a strict mode reserved word, and so it would be permissible
 // to allow 'interface' and the name of the interface to be on separate lines;

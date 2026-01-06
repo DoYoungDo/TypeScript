@@ -2,25 +2,25 @@
 
 var s: string;
 module M1 {
-    export var s: number;
+    export var s: number = 0;
     var n = s;
     var n: number;
 }
 
 module M2 {
-    var s: number;
+    var s: number = 0;
     var n = s;
     var n: number;
 }
 
 function fn() {
-    var s: boolean;
+    var s: boolean = false;
     var n = s;
     var n: boolean;
 }
 
 class C {
-    s: Date;
+    s!: Date;
     n = this.s;
     x() {
         var p = this.n;

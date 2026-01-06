@@ -6,7 +6,7 @@ module m1 {
 
     declare function testFunction(n: number): Promise<number>;
 
-    var numPromise: Promise<number>;
+    declare var numPromise: Promise<number>;
     var newPromise = numPromise.then(testFunction);
 }
 
@@ -20,7 +20,7 @@ module m2 {
     declare function testFunction(n: number): Promise<number>;
     declare function testFunction(s: string): Promise<string>;
 
-    var numPromise: Promise<number>;
+    declare var numPromise: Promise<number>;
     var newPromise = numPromise.then(testFunction);
 }
 
@@ -34,7 +34,7 @@ module m3 {
 
     declare function testFunction(n: number): Promise<number>;
 
-    var numPromise: Promise<number>;
+    declare var numPromise: Promise<number>;
     var newPromise = numPromise.then(testFunction);
 }
 
@@ -49,7 +49,7 @@ module m4 {
     declare function testFunction(n: number): Promise<number>;
     declare function testFunction(s: string): Promise<string>;
 
-    var numPromise: Promise<number>;
+    declare var numPromise: Promise<number>;
     var newPromise = numPromise.then(testFunction);
 }
 
@@ -65,7 +65,7 @@ module m5 {
     declare function testFunction(n: number): Promise<number>;
     declare function testFunction(s: string): Promise<string>;
 
-    var numPromise: Promise<number>;
+    declare var numPromise: Promise<number>;
     var newPromise = numPromise.then(testFunction);
 }
 
@@ -81,6 +81,6 @@ module m6 {
     declare function testFunction(s: string): Promise<string>;
     declare function testFunction(b: boolean): Promise<boolean>;
 
-    var numPromise: Promise<number>;
+    declare var numPromise: Promise<number>;
     var newPromise = numPromise.then(testFunction);
 }

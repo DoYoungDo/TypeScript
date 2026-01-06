@@ -1,4 +1,5 @@
 // @declaration: true
+// @strict: false
 module rionegrensis {
   export class caniventer extends Lanthanum.nitidus<petrophilus.minutilla, julianae.sumatrana> {
     salomonseni() : caniventer { var x : caniventer; () => { var y = this; }; return x; }

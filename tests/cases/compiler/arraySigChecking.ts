@@ -14,7 +14,7 @@ declare module M {
 interface myInt {
     voidFn(): void;
 }
-var myVar: myInt;
+declare var myVar: myInt;
 var strArray: string[] = [myVar.voidFn()];
 
 
