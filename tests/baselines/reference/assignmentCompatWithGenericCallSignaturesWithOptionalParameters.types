@@ -388,11 +388,11 @@ module GenericSignaturesInvalid {
 >foo : <T>() => void
 >    : ^ ^^^^^^^^^^^
 
-        var b: Base2;
+        declare var b: Base2;
 >b : Base2
 >  : ^^^^^
 
-        var t: Target<T>;
+        declare var t: Target<T>;
 >t : Target<T>
 >  : ^^^^^^^^^
 

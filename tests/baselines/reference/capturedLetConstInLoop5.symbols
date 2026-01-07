@@ -657,19 +657,20 @@ function foo8_c(x) {
         const x = 1;
 >x : Symbol(x, Decl(capturedLetConstInLoop5.ts, 268, 13))
 
+        var
         var v = x;
->v : Symbol(v, Decl(capturedLetConstInLoop5.ts, 269, 11))
+>v : Symbol(v, Decl(capturedLetConstInLoop5.ts, 270, 11))
 >x : Symbol(x, Decl(capturedLetConstInLoop5.ts, 268, 13))
 
         (function() { return x + y + v });
 >x : Symbol(x, Decl(capturedLetConstInLoop5.ts, 268, 13))
 >y : Symbol(y, Decl(capturedLetConstInLoop5.ts, 267, 14))
->v : Symbol(v, Decl(capturedLetConstInLoop5.ts, 269, 11))
+>v : Symbol(v, Decl(capturedLetConstInLoop5.ts, 270, 11))
 
         (() => x + y + v);
 >x : Symbol(x, Decl(capturedLetConstInLoop5.ts, 268, 13))
 >y : Symbol(y, Decl(capturedLetConstInLoop5.ts, 267, 14))
->v : Symbol(v, Decl(capturedLetConstInLoop5.ts, 269, 11))
+>v : Symbol(v, Decl(capturedLetConstInLoop5.ts, 270, 11))
 
         if (x == 1) {
 >x : Symbol(x, Decl(capturedLetConstInLoop5.ts, 268, 13))
@@ -680,5 +681,5 @@ function foo8_c(x) {
     
     use(v);
 >use : Symbol(use, Decl(capturedLetConstInLoop5.ts, 0, 0))
->v : Symbol(v, Decl(capturedLetConstInLoop5.ts, 269, 11))
+>v : Symbol(v, Decl(capturedLetConstInLoop5.ts, 270, 11))
 }

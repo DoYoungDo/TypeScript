@@ -3,8 +3,8 @@
 === asiPreventsParsingAsInterface05.ts ===
 "use strict"
 
-var interface: number;
->interface : Symbol(interface, Decl(asiPreventsParsingAsInterface05.ts, 2, 3))
+declare var interface: number;
+>interface : Symbol(interface, Decl(asiPreventsParsingAsInterface05.ts, 2, 11))
 
 // 'interface' is a strict mode reserved word, and so it would be permissible
 // to allow 'interface' and the name of the interface to be on separate lines;
@@ -12,7 +12,7 @@ var interface: number;
 // declarations such that their identifier must follow 'interface' on the same line.
 
 interface   // This should be the identifier 'interface'
->interface : Symbol(interface, Decl(asiPreventsParsingAsInterface05.ts, 2, 3))
+>interface : Symbol(interface, Decl(asiPreventsParsingAsInterface05.ts, 2, 11))
 
 I           // This should be the identifier 'I'
 { }         // This should be a block body

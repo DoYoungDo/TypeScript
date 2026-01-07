@@ -82,7 +82,7 @@ module MemberWithConstructSignature {
 >  : ^
     }
 
-    var b: Base;
+    declare var b: Base;
 >b : Base
 >  : ^^^^
 

@@ -9,7 +9,7 @@ module server {
         use: (mod: connectModule) => connectExport;
     }
 }
-var server: {
+declare var server: {
     (): server.connectExport;
     foo: Date;
 };
@@ -24,7 +24,6 @@ connect().use(connect.static('foo')); // Error  1      The property 'static' doe
 //// [exportEqualErrorType_0.js]
 define(["require", "exports"], function (require, exports) {
     "use strict";
-    var server;
     return server;
 });
 //// [exportEqualErrorType_1.js]

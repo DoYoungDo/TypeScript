@@ -59,8 +59,8 @@ module GenericSignaturesInvalid {
 
 
     function foo<T>() {
-        var b: Base2;
-        var t: Target<T>;
+        declare var b: Base2;
+        declare var t: Target<T>;
 
         // all errors
         b.a = t.a;
@@ -176,8 +176,6 @@ var GenericSignaturesInvalid;
         return Target;
     }());
     function foo() {
-        var b;
-        var t;
         // all errors
         b.a = t.a;
         b.a = t.a2;

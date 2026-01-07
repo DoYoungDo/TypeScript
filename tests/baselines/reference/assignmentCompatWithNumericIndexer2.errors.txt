@@ -4,6 +4,8 @@ assignmentCompatWithNumericIndexer2.ts(14,1): error TS2322: Type 'A' is not assi
 assignmentCompatWithNumericIndexer2.ts(18,1): error TS2322: Type 'A' is not assignable to type '{ [x: number]: Derived2; }'.
   'number' index signatures are incompatible.
     Type 'Base' is missing the following properties from type 'Derived2': baz, bar
+assignmentCompatWithNumericIndexer2.ts(30,9): error TS1184: Modifiers cannot appear here.
+assignmentCompatWithNumericIndexer2.ts(31,9): error TS1184: Modifiers cannot appear here.
 assignmentCompatWithNumericIndexer2.ts(32,9): error TS2322: Type '{ [x: number]: Derived; }' is not assignable to type 'A<T>'.
   'number' index signatures are incompatible.
     Type 'Derived' is not assignable to type 'T'.
@@ -12,6 +14,7 @@ assignmentCompatWithNumericIndexer2.ts(33,9): error TS2322: Type 'A<T>' is not a
   'number' index signatures are incompatible.
     Type 'T' is not assignable to type 'Derived'.
       Property 'bar' is missing in type 'Base' but required in type 'Derived'.
+assignmentCompatWithNumericIndexer2.ts(35,9): error TS1184: Modifiers cannot appear here.
 assignmentCompatWithNumericIndexer2.ts(36,9): error TS2322: Type '{ [x: number]: Derived2; }' is not assignable to type 'A<T>'.
   'number' index signatures are incompatible.
     Type 'Derived2' is not assignable to type 'T'.
@@ -20,9 +23,10 @@ assignmentCompatWithNumericIndexer2.ts(37,9): error TS2322: Type 'A<T>' is not a
   'number' index signatures are incompatible.
     Type 'T' is not assignable to type 'Derived2'.
       Type 'Base' is missing the following properties from type 'Derived2': baz, bar
+assignmentCompatWithNumericIndexer2.ts(39,9): error TS1184: Modifiers cannot appear here.
 
 
-==== assignmentCompatWithNumericIndexer2.ts (6 errors) ====
+==== assignmentCompatWithNumericIndexer2.ts (10 errors) ====
     // Derived type indexer must be subtype of base type indexer
     
     interface Base { foo: string; }
@@ -33,8 +37,8 @@ assignmentCompatWithNumericIndexer2.ts(37,9): error TS2322: Type 'A<T>' is not a
         [x: number]: Base;
     }
     
-    var a: A;
-    var b: { [x: number]: Derived; }
+    declare var a: A;
+    declare var b: { [x: number]: Derived; }
     a = b;
     b = a; // error
     ~
@@ -43,7 +47,7 @@ assignmentCompatWithNumericIndexer2.ts(37,9): error TS2322: Type 'A<T>' is not a
 !!! error TS2322:     Property 'bar' is missing in type 'Base' but required in type 'Derived'.
 !!! related TS2728 assignmentCompatWithNumericIndexer2.ts:4:34: 'bar' is declared here.
     
-    var b2: { [x: number]: Derived2; }
+    declare var b2: { [x: number]: Derived2; }
     a = b2;
     b2 = a; // error
     ~~
@@ -61,8 +65,12 @@ assignmentCompatWithNumericIndexer2.ts(37,9): error TS2322: Type 'A<T>' is not a
         }
     
         function foo<T extends Base>() {
-            var a: A<T>;
-            var b: { [x: number]: Derived; }
+            declare var a: A<T>;
+            ~~~~~~~
+!!! error TS1184: Modifiers cannot appear here.
+            declare var b: { [x: number]: Derived; }
+            ~~~~~~~
+!!! error TS1184: Modifiers cannot appear here.
             a = b; // error
             ~
 !!! error TS2322: Type '{ [x: number]: Derived; }' is not assignable to type 'A<T>'.
@@ -77,7 +85,9 @@ assignmentCompatWithNumericIndexer2.ts(37,9): error TS2322: Type 'A<T>' is not a
 !!! error TS2322:       Property 'bar' is missing in type 'Base' but required in type 'Derived'.
 !!! related TS2728 assignmentCompatWithNumericIndexer2.ts:4:34: 'bar' is declared here.
     
-            var b2: { [x: number]: Derived2; }
+            declare var b2: { [x: number]: Derived2; }
+            ~~~~~~~
+!!! error TS1184: Modifiers cannot appear here.
             a = b2; // error
             ~
 !!! error TS2322: Type '{ [x: number]: Derived2; }' is not assignable to type 'A<T>'.
@@ -91,7 +101,9 @@ assignmentCompatWithNumericIndexer2.ts(37,9): error TS2322: Type 'A<T>' is not a
 !!! error TS2322:     Type 'T' is not assignable to type 'Derived2'.
 !!! error TS2322:       Type 'Base' is missing the following properties from type 'Derived2': baz, bar
     
-            var b3: { [x: number]: T; }
+            declare var b3: { [x: number]: T; }
+            ~~~~~~~
+!!! error TS1184: Modifiers cannot appear here.
             a = b3; // ok
             b3 = a; // ok
         }

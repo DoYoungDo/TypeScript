@@ -5,7 +5,7 @@
 >"use strict" : "use strict"
 >             : ^^^^^^^^^^^^
 
-var interface: number;
+declare var interface: number;
 >interface : number
 >          : ^^^^^^
 

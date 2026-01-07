@@ -6,7 +6,7 @@
 
 module onlyT {
     function foo<T>(a: (x: T) => T, b: (x: T) => T) {
-        var r: (x: T) => T;
+        var r!: (x: T) => T;
         return r;
     }
 
@@ -20,7 +20,7 @@ module onlyT {
     }
 
     function foo2<T extends Date>(a: (x: T) => T, b: (x: T) => T) {
-        var r: (x: T) => T;
+        var r!: (x: T) => T;
         return r;
     }
 
@@ -33,7 +33,7 @@ module onlyT {
     enum F { A }
 
     function foo3<T>(x: T, a: (x: T) => T, b: (x: T) => T) {
-        var r: (x: T) => T;
+        var r!: (x: T) => T;
         return r;
     }
 
@@ -42,7 +42,7 @@ module onlyT {
 
 module TU {
     function foo<T, U>(a: (x: T) => T, b: (x: U) => U) {
-        var r: (x: T) => T;
+        var r!: (x: T) => T;
         return r;
     }
 
@@ -55,7 +55,7 @@ module TU {
     }
 
     function foo2<T extends Date, U extends Date>(a: (x: T) => T, b: (x: U) => U) {
-        var r: (x: T) => T;
+        var r!: (x: T) => T;
         return r;
     }
 
@@ -67,8 +67,8 @@ module TU {
     enum E { A }
     enum F { A }
 
-    function foo3<T>(x: T, a: (x: T) => T, b: (x: U) => U) {
-        var r: (x: T) => T;
+    function foo3<T>(x: T, a: (x: T) => T, b: (x: any) => any) {
+        var r!: (x: T) => T;
         return r;
     }
 

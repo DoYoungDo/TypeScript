@@ -21,7 +21,7 @@ module m1 {
 >n : number
 >  : ^^^^^^
 
-    var numPromise: Promise<number>;
+    declare var numPromise: Promise<number>;
 >numPromise : Promise<number>
 >           : ^^^^^^^^^^^^^^^
 
@@ -68,7 +68,7 @@ module m2 {
 >s : string
 >  : ^^^^^^
 
-    var numPromise: Promise<number>;
+    declare var numPromise: Promise<number>;
 >numPromise : Promise<number>
 >           : ^^^^^^^^^^^^^^^
 
@@ -121,7 +121,7 @@ module m3 {
 >n : number
 >  : ^^^^^^
 
-    var numPromise: Promise<number>;
+    declare var numPromise: Promise<number>;
 >numPromise : Promise<number>
 >           : ^^^^^^^^^^^^^^^
 
@@ -180,7 +180,7 @@ module m4 {
 >s : string
 >  : ^^^^^^
 
-    var numPromise: Promise<number>;
+    declare var numPromise: Promise<number>;
 >numPromise : Promise<number>
 >           : ^^^^^^^^^^^^^^^
 
@@ -255,7 +255,7 @@ module m5 {
 >s : string
 >  : ^^^^^^
 
-    var numPromise: Promise<number>;
+    declare var numPromise: Promise<number>;
 >numPromise : Promise<number>
 >           : ^^^^^^^^^^^^^^^
 
@@ -320,7 +320,7 @@ module m6 {
 >b : boolean
 >  : ^^^^^^^
 
-    var numPromise: Promise<number>;
+    declare var numPromise: Promise<number>;
 >numPromise : Promise<number>
 >           : ^^^^^^^^^^^^^^^
 

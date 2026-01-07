@@ -218,7 +218,7 @@ c6t5 = <(n: number) => IFoo>function(n) { return <IFoo>({}) };
 >IFoo : Symbol(IFoo, Decl(contextualTyping.ts, 0, 0))
 
 // CONTEXT: Array index assignment
-var c7t2: IFoo[];
+var c7t2: IFoo[] = [];
 >c7t2 : Symbol(c7t2, Decl(contextualTyping.ts, 77, 3))
 >IFoo : Symbol(IFoo, Decl(contextualTyping.ts, 0, 0))
 

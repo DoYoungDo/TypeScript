@@ -2,6 +2,8 @@ assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts(14,13): error
   Target signature provides too few arguments. Expected 1 or more, but got 0.
 assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts(23,13): error TS2322: Type '(x: T, y: T) => any' is not assignable to type '(x: T) => T'.
   Target signature provides too few arguments. Expected 2 or more, but got 1.
+assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts(59,9): error TS1184: Modifiers cannot appear here.
+assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts(60,9): error TS1184: Modifiers cannot appear here.
 assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts(63,9): error TS2322: Type '() => T' is not assignable to type '<T>() => T'.
   Type 'T' is not assignable to type 'T'. Two different types with this name exist, but they are unrelated.
     'T' could be instantiated with an arbitrary type which could be unrelated to 'T'.
@@ -97,7 +99,7 @@ assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts(116,13): erro
   Target signature provides too few arguments. Expected 2 or more, but got 1.
 
 
-==== assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts (29 errors) ====
+==== assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts (31 errors) ====
     // call signatures in derived types must have the same or fewer optional parameters as the target for assignment
     
     module ClassTypeParam {
@@ -162,8 +164,12 @@ assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts(116,13): erro
     
     
         function foo<T>() {
-            var b: Base2;
-            var t: Target<T>;
+            declare var b: Base2;
+            ~~~~~~~
+!!! error TS1184: Modifiers cannot appear here.
+            declare var t: Target<T>;
+            ~~~~~~~
+!!! error TS1184: Modifiers cannot appear here.
     
             // all errors
             b.a = t.a;

@@ -20,7 +20,7 @@ module onlyT {
 >x : T
 >  : ^
 
-        var r: (x: T) => T;
+        var r!: (x: T) => T;
 >r : (x: T) => T
 >  : ^ ^^ ^^^^^ 
 >x : T
@@ -115,7 +115,7 @@ module onlyT {
 >x : T
 >  : ^
 
-        var r: (x: T) => T;
+        var r!: (x: T) => T;
 >r : (x: T) => T
 >  : ^ ^^ ^^^^^ 
 >x : T
@@ -199,7 +199,7 @@ module onlyT {
 >x : T
 >  : ^
 
-        var r: (x: T) => T;
+        var r!: (x: T) => T;
 >r : (x: T) => T
 >  : ^ ^^ ^^^^^ 
 >x : T
@@ -261,7 +261,7 @@ module TU {
 >x : U
 >  : ^
 
-        var r: (x: T) => T;
+        var r!: (x: T) => T;
 >r : (x: T) => T
 >  : ^ ^^ ^^^^^ 
 >x : T
@@ -355,7 +355,7 @@ module TU {
 >x : U
 >  : ^
 
-        var r: (x: T) => T;
+        var r!: (x: T) => T;
 >r : (x: T) => T
 >  : ^ ^^ ^^^^^ 
 >x : T
@@ -425,21 +425,21 @@ module TU {
 >A : F.A
 >  : ^^^
 
-    function foo3<T>(x: T, a: (x: T) => T, b: (x: U) => U) {
->foo3 : <T>(x: T, a: (x: T) => T, b: (x: U) => U) => (x: T) => T
->     : ^ ^^ ^^ ^^ ^^           ^^ ^^           ^^^^^^ ^^ ^^^^^ 
+    function foo3<T>(x: T, a: (x: T) => T, b: (x: any) => any) {
+>foo3 : <T>(x: T, a: (x: T) => T, b: (x: any) => any) => (x: T) => T
+>     : ^ ^^ ^^ ^^ ^^           ^^ ^^               ^^^^^^ ^^ ^^^^^ 
 >x : T
 >  : ^
 >a : (x: T) => T
 >  : ^ ^^ ^^^^^ 
 >x : T
 >  : ^
->b : (x: U) => U
->  : ^ ^^ ^^^^^ 
->x : U
->  : ^
+>b : (x: any) => any
+>  : ^ ^^   ^^^^^   
+>x : any
+>  : ^^^
 
-        var r: (x: T) => T;
+        var r!: (x: T) => T;
 >r : (x: T) => T
 >  : ^ ^^ ^^^^^ 
 >x : T
@@ -455,8 +455,8 @@ module TU {
 >   : ^ ^^^^^^^^^
 >foo3(E.A, (x) => E.A, (x) => F.A) : (x: E) => E
 >                                  : ^ ^^^^^^^^^
->foo3 : <T>(x: T, a: (x: T) => T, b: (x: U) => U) => (x: T) => T
->     : ^ ^^ ^^ ^^ ^^           ^^ ^^           ^^^^^^ ^^ ^^^^^ 
+>foo3 : <T>(x: T, a: (x: T) => T, b: (x: any) => any) => (x: T) => T
+>     : ^ ^^ ^^ ^^ ^^           ^^ ^^               ^^^^^^ ^^ ^^^^^ 
 >E.A : E
 >    : ^
 >E : typeof E
@@ -473,10 +473,10 @@ module TU {
 >  : ^^^^^^^^
 >A : E
 >  : ^
->(x) => F.A : (x: U) => F
->           : ^ ^^^^^^^^^
->x : U
->  : ^
+>(x) => F.A : (x: any) => F
+>           : ^ ^^^^^^^^^^^
+>x : any
+>  : ^^^
 >F.A : F
 >    : ^
 >F : typeof F

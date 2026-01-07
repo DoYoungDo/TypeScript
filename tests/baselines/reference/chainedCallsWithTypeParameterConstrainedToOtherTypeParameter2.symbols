@@ -20,12 +20,12 @@ class Chain<T> {
 >Chain : Symbol(Chain, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 0, 0))
 >S : Symbol(S, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 2, 9))
 
-        var t: T;
->t : Symbol(t, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 3, 11))
+        declare var t: T;
+>t : Symbol(t, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 3, 19))
 >T : Symbol(T, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 0, 12))
 
-        var s: S;
->s : Symbol(s, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 4, 11))
+        declare var s: S;
+>s : Symbol(s, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 4, 19))
 >S : Symbol(S, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 2, 9))
 
         // Ok to go down the chain, but error to climb up the chain
@@ -33,22 +33,22 @@ class Chain<T> {
 >(new Chain(t)).then(tt => s).then : Symbol(Chain.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 1, 36))
 >(new Chain(t)).then : Symbol(Chain.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 1, 36))
 >Chain : Symbol(Chain, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 0, 0))
->t : Symbol(t, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 3, 11))
+>t : Symbol(t, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 3, 19))
 >then : Symbol(Chain.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 1, 36))
 >tt : Symbol(tt, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 6, 28))
->s : Symbol(s, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 4, 11))
+>s : Symbol(s, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 4, 19))
 >then : Symbol(Chain.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 1, 36))
 >ss : Symbol(ss, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 6, 42))
->t : Symbol(t, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 3, 11))
+>t : Symbol(t, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 3, 19))
 
         // But error to try to climb up the chain
         (new Chain(s)).then(ss => t);
 >(new Chain(s)).then : Symbol(Chain.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 1, 36))
 >Chain : Symbol(Chain, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 0, 0))
->s : Symbol(s, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 4, 11))
+>s : Symbol(s, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 4, 19))
 >then : Symbol(Chain.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 1, 36))
 >ss : Symbol(ss, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 9, 28))
->t : Symbol(t, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 3, 11))
+>t : Symbol(t, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 3, 19))
 
         // Staying at T or S should be fine
         (new Chain(t)).then(tt => t).then(tt => t).then(tt => t);
@@ -56,32 +56,32 @@ class Chain<T> {
 >(new Chain(t)).then(tt => t).then : Symbol(Chain.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 1, 36))
 >(new Chain(t)).then : Symbol(Chain.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 1, 36))
 >Chain : Symbol(Chain, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 0, 0))
->t : Symbol(t, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 3, 11))
+>t : Symbol(t, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 3, 19))
 >then : Symbol(Chain.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 1, 36))
 >tt : Symbol(tt, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 12, 28))
->t : Symbol(t, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 3, 11))
+>t : Symbol(t, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 3, 19))
 >then : Symbol(Chain.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 1, 36))
 >tt : Symbol(tt, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 12, 42))
->t : Symbol(t, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 3, 11))
+>t : Symbol(t, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 3, 19))
 >then : Symbol(Chain.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 1, 36))
 >tt : Symbol(tt, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 12, 56))
->t : Symbol(t, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 3, 11))
+>t : Symbol(t, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 3, 19))
 
         (new Chain(s)).then(ss => s).then(ss => s).then(ss => s);
 >(new Chain(s)).then(ss => s).then(ss => s).then : Symbol(Chain.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 1, 36))
 >(new Chain(s)).then(ss => s).then : Symbol(Chain.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 1, 36))
 >(new Chain(s)).then : Symbol(Chain.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 1, 36))
 >Chain : Symbol(Chain, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 0, 0))
->s : Symbol(s, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 4, 11))
+>s : Symbol(s, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 4, 19))
 >then : Symbol(Chain.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 1, 36))
 >ss : Symbol(ss, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 13, 28))
->s : Symbol(s, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 4, 11))
+>s : Symbol(s, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 4, 19))
 >then : Symbol(Chain.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 1, 36))
 >ss : Symbol(ss, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 13, 42))
->s : Symbol(s, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 4, 11))
+>s : Symbol(s, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 4, 19))
 >then : Symbol(Chain.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 1, 36))
 >ss : Symbol(ss, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 13, 56))
->s : Symbol(s, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 4, 11))
+>s : Symbol(s, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 4, 19))
 
         return null;
     }
@@ -114,16 +114,16 @@ class Chain2<T extends I> {
 >Chain2 : Symbol(Chain2, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 22, 1))
 >S : Symbol(S, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 25, 9))
 
-        var i: I;
->i : Symbol(i, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 26, 11))
+        declare var i: I;
+>i : Symbol(i, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 26, 19))
 >I : Symbol(I, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 17, 1))
 
-        var t: T;
->t : Symbol(t, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 27, 11))
+        declare var t: T;
+>t : Symbol(t, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 27, 19))
 >T : Symbol(T, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 23, 13))
 
-        var s: S;
->s : Symbol(s, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 28, 11))
+        declare var s: S;
+>s : Symbol(s, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 28, 19))
 >S : Symbol(S, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 25, 9))
 
         // Ok to go down the chain, check the constraint at the end.
@@ -134,13 +134,13 @@ class Chain2<T extends I> {
 >(new Chain2(i)).then(ii => t).then : Symbol(Chain2.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 24, 36))
 >(new Chain2(i)).then : Symbol(Chain2.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 24, 36))
 >Chain2 : Symbol(Chain2, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 22, 1))
->i : Symbol(i, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 26, 11))
+>i : Symbol(i, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 26, 19))
 >then : Symbol(Chain2.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 24, 36))
 >ii : Symbol(ii, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 31, 29))
->t : Symbol(t, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 27, 11))
+>t : Symbol(t, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 27, 19))
 >then : Symbol(Chain2.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 24, 36))
 >tt : Symbol(tt, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 31, 43))
->s : Symbol(s, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 28, 11))
+>s : Symbol(s, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 28, 19))
 >value : Symbol(Chain2.value, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 24, 16))
 >x : Symbol(I.x, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 20, 13))
 
@@ -154,19 +154,19 @@ class Chain2<T extends I> {
 >(new Chain2(i)).then(ii => t).then : Symbol(Chain2.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 24, 36))
 >(new Chain2(i)).then : Symbol(Chain2.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 24, 36))
 >Chain2 : Symbol(Chain2, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 22, 1))
->i : Symbol(i, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 26, 11))
+>i : Symbol(i, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 26, 19))
 >then : Symbol(Chain2.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 24, 36))
 >ii : Symbol(ii, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 35, 29))
->t : Symbol(t, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 27, 11))
+>t : Symbol(t, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 27, 19))
 >then : Symbol(Chain2.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 24, 36))
 >tt : Symbol(tt, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 35, 43))
->t : Symbol(t, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 27, 11))
+>t : Symbol(t, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 27, 19))
 >then : Symbol(Chain2.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 24, 36))
 >tt : Symbol(tt, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 35, 57))
->t : Symbol(t, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 27, 11))
+>t : Symbol(t, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 27, 19))
 >then : Symbol(Chain2.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 24, 36))
 >tt : Symbol(tt, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 35, 71))
->t : Symbol(t, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 27, 11))
+>t : Symbol(t, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 27, 19))
 >value : Symbol(Chain2.value, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 24, 16))
 >x : Symbol(I.x, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 20, 13))
 
@@ -178,19 +178,19 @@ class Chain2<T extends I> {
 >(new Chain2(i)).then(ii => s).then : Symbol(Chain2.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 24, 36))
 >(new Chain2(i)).then : Symbol(Chain2.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 24, 36))
 >Chain2 : Symbol(Chain2, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 22, 1))
->i : Symbol(i, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 26, 11))
+>i : Symbol(i, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 26, 19))
 >then : Symbol(Chain2.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 24, 36))
 >ii : Symbol(ii, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 36, 29))
->s : Symbol(s, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 28, 11))
+>s : Symbol(s, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 28, 19))
 >then : Symbol(Chain2.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 24, 36))
 >ss : Symbol(ss, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 36, 43))
->s : Symbol(s, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 28, 11))
+>s : Symbol(s, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 28, 19))
 >then : Symbol(Chain2.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 24, 36))
 >ss : Symbol(ss, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 36, 57))
->s : Symbol(s, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 28, 11))
+>s : Symbol(s, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 28, 19))
 >then : Symbol(Chain2.then, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 24, 36))
 >ss : Symbol(ss, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 36, 71))
->s : Symbol(s, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 28, 11))
+>s : Symbol(s, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 28, 19))
 >value : Symbol(Chain2.value, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 24, 16))
 >x : Symbol(I.x, Decl(chainedCallsWithTypeParameterConstrainedToOtherTypeParameter2.ts, 20, 13))
 
