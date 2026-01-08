@@ -51,5 +51,3 @@ namespace Generics {
         b4 = a3; // error
     }
 }
-
-let x!: string = 123
