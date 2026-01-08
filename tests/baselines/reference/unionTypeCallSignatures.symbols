@@ -3,7 +3,7 @@
 === unionTypeCallSignatures.ts ===
 declare var numOrDate: number | Date;
 >numOrDate : Symbol(numOrDate, Decl(unionTypeCallSignatures.ts, 0, 11))
->Date : Symbol(Date, Decl(lib.es5.d.ts, --, --), Decl(lib.es5.d.ts, --, --), Decl(lib.es5.d.ts, --, --), Decl(lib.scripthost.d.ts, --, --))
+>Date : Symbol(Date, Decl(lib.es5.d.ts, --, --), Decl(lib.es5.d.ts, --, --), Decl(lib.es5.d.ts, --, --), Decl(lib.scripthost.d.ts, --, --), Decl(lib.es2015.symbol.wellknown.d.ts, --, --))
 
 declare var strOrBoolean: string | boolean;
 >strOrBoolean : Symbol(strOrBoolean, Decl(unionTypeCallSignatures.ts, 1, 11))
@@ -17,7 +17,7 @@ declare var unionOfDifferentReturnType: { (a: number): number; } | { (a: number)
 >unionOfDifferentReturnType : Symbol(unionOfDifferentReturnType, Decl(unionTypeCallSignatures.ts, 6, 11))
 >a : Symbol(a, Decl(unionTypeCallSignatures.ts, 6, 43))
 >a : Symbol(a, Decl(unionTypeCallSignatures.ts, 6, 70))
->Date : Symbol(Date, Decl(lib.es5.d.ts, --, --), Decl(lib.es5.d.ts, --, --), Decl(lib.es5.d.ts, --, --), Decl(lib.scripthost.d.ts, --, --))
+>Date : Symbol(Date, Decl(lib.es5.d.ts, --, --), Decl(lib.es5.d.ts, --, --), Decl(lib.es5.d.ts, --, --), Decl(lib.scripthost.d.ts, --, --), Decl(lib.es2015.symbol.wellknown.d.ts, --, --))
 
 numOrDate = unionOfDifferentReturnType(10);
 >numOrDate : Symbol(numOrDate, Decl(unionTypeCallSignatures.ts, 0, 11))
@@ -35,7 +35,7 @@ declare var unionOfDifferentReturnType1: { (a: number): number; (a: string): str
 >a : Symbol(a, Decl(unionTypeCallSignatures.ts, 11, 44))
 >a : Symbol(a, Decl(unionTypeCallSignatures.ts, 11, 65))
 >a : Symbol(a, Decl(unionTypeCallSignatures.ts, 11, 92))
->Date : Symbol(Date, Decl(lib.es5.d.ts, --, --), Decl(lib.es5.d.ts, --, --), Decl(lib.es5.d.ts, --, --), Decl(lib.scripthost.d.ts, --, --))
+>Date : Symbol(Date, Decl(lib.es5.d.ts, --, --), Decl(lib.es5.d.ts, --, --), Decl(lib.es5.d.ts, --, --), Decl(lib.scripthost.d.ts, --, --), Decl(lib.es2015.symbol.wellknown.d.ts, --, --))
 >a : Symbol(a, Decl(unionTypeCallSignatures.ts, 11, 111))
 
 numOrDate = unionOfDifferentReturnType1(10);
@@ -56,7 +56,7 @@ declare var unionOfDifferentParameterTypes: { (a: number): number; } | { (a: str
 >unionOfDifferentParameterTypes : Symbol(unionOfDifferentParameterTypes, Decl(unionTypeCallSignatures.ts, 17, 11))
 >a : Symbol(a, Decl(unionTypeCallSignatures.ts, 17, 47))
 >a : Symbol(a, Decl(unionTypeCallSignatures.ts, 17, 74))
->Date : Symbol(Date, Decl(lib.es5.d.ts, --, --), Decl(lib.es5.d.ts, --, --), Decl(lib.es5.d.ts, --, --), Decl(lib.scripthost.d.ts, --, --))
+>Date : Symbol(Date, Decl(lib.es5.d.ts, --, --), Decl(lib.es5.d.ts, --, --), Decl(lib.es5.d.ts, --, --), Decl(lib.scripthost.d.ts, --, --), Decl(lib.es2015.symbol.wellknown.d.ts, --, --))
 
 unionOfDifferentParameterTypes(10);// error - no call signatures
 >unionOfDifferentParameterTypes : Symbol(unionOfDifferentParameterTypes, Decl(unionTypeCallSignatures.ts, 17, 11))
@@ -71,7 +71,7 @@ declare var unionOfDifferentNumberOfSignatures: { (a: number): number; } | { (a:
 >unionOfDifferentNumberOfSignatures : Symbol(unionOfDifferentNumberOfSignatures, Decl(unionTypeCallSignatures.ts, 22, 11))
 >a : Symbol(a, Decl(unionTypeCallSignatures.ts, 22, 51))
 >a : Symbol(a, Decl(unionTypeCallSignatures.ts, 22, 78))
->Date : Symbol(Date, Decl(lib.es5.d.ts, --, --), Decl(lib.es5.d.ts, --, --), Decl(lib.es5.d.ts, --, --), Decl(lib.scripthost.d.ts, --, --))
+>Date : Symbol(Date, Decl(lib.es5.d.ts, --, --), Decl(lib.es5.d.ts, --, --), Decl(lib.es5.d.ts, --, --), Decl(lib.scripthost.d.ts, --, --), Decl(lib.es2015.symbol.wellknown.d.ts, --, --))
 >a : Symbol(a, Decl(unionTypeCallSignatures.ts, 22, 97))
 
 unionOfDifferentNumberOfSignatures(); // error - no call signatures
