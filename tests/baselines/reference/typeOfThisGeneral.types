@@ -688,7 +688,7 @@ var q2 = (s = this) => {
 >  : ^
 }
 
-//type of 'this' in global module is GlobalThis
+//type of 'this' in global namespace is GlobalThis
 var t!: typeof globalThis;
 >t : typeof globalThis
 >  : ^^^^^^^^^^^^^^^^^

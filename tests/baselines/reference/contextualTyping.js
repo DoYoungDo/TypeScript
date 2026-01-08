@@ -20,8 +20,8 @@ class C1T5 {
     }
 }
 
-// CONTEXT: Module property declaration
-module C2T5 {
+// CONTEXT: Namespace property declaration
+namespace C2T5 {
     export var foo: (i: number, s: string) => number = function(i) {
         return i;
     }
@@ -65,8 +65,8 @@ class C4T5 {
     }
 }
 
-// CONTEXT: Module property assignment
-module C5T5 {
+// CONTEXT: Namespace property assignment
+namespace C5T5 {
     export var foo: (i: number, s: string) => string;
     foo = function(i, s) {
         return s;
@@ -236,7 +236,7 @@ var C1T5 = /** @class */ (function () {
     }
     return C1T5;
 }());
-// CONTEXT: Module property declaration
+// CONTEXT: Namespace property declaration
 var C2T5;
 (function (C2T5) {
     C2T5.foo = function (i) {
@@ -275,7 +275,7 @@ var C4T5 = /** @class */ (function () {
     }
     return C4T5;
 }());
-// CONTEXT: Module property assignment
+// CONTEXT: Namespace property assignment
 var C5T5;
 (function (C5T5) {
     C5T5.foo = function (i, s) {

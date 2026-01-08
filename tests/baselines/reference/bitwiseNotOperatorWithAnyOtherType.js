@@ -20,7 +20,7 @@ class A {
         return a;
     }
 }
-module M {
+namespace M {
     export declare var n: any;
 }
 declare var objA: A;

@@ -48,7 +48,7 @@ assignmentCompatWithNumericIndexer3.ts(36,9): error TS1184: Modifiers cannot app
 !!! error TS2322:     Property 'baz' is missing in type 'Derived' but required in type 'Derived2'.
 !!! related TS2728 assignmentCompatWithNumericIndexer3.ts:5:38: 'baz' is declared here.
     
-    module Generics {
+    namespace Generics {
         class A<T extends Derived> {
             [x: number]: T;
         }

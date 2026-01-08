@@ -55,7 +55,7 @@ assignmentCompatWithNumericIndexer2.ts(39,9): error TS1184: Modifiers cannot app
 !!! error TS2322:   'number' index signatures are incompatible.
 !!! error TS2322:     Type 'Base' is missing the following properties from type 'Derived2': baz, bar
     
-    module Generics {
+    namespace Generics {
         interface A<T extends Base> {
             [x: number]: T;
         }

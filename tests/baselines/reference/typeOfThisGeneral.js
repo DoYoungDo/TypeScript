@@ -172,7 +172,7 @@ var q2 = (s = this) => {
     this.spaaaaace = 4;
 }
 
-//type of 'this' in global module is GlobalThis
+//type of 'this' in global namespace is GlobalThis
 var t!: typeof globalThis;
 var t = this;
 this.spaaaaace = 4;
@@ -323,7 +323,7 @@ var q2 = (s = this) => {
     var t = this;
     this.spaaaaace = 4;
 };
-//type of 'this' in global module is GlobalThis
+//type of 'this' in global namespace is GlobalThis
 var t;
 var t = this;
 this.spaaaaace = 4;

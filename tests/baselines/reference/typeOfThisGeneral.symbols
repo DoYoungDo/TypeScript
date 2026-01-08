@@ -447,7 +447,7 @@ var q2 = (s = this) => {
 >this : Symbol(globalThis)
 }
 
-//type of 'this' in global module is GlobalThis
+//type of 'this' in global namespace is GlobalThis
 var t!: typeof globalThis;
 >t : Symbol(t, Decl(typeOfThisGeneral.ts, 172, 3), Decl(typeOfThisGeneral.ts, 173, 3))
 >globalThis : Symbol(globalThis)

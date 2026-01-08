@@ -17,7 +17,7 @@ class A {
     static foo() { return false; }
 >foo : Symbol(A.foo, Decl(negateOperatorWithBooleanType.ts, 6, 23))
 }
-module M {
+namespace M {
 >M : Symbol(M, Decl(negateOperatorWithBooleanType.ts, 8, 1))
 
     export declare var n: boolean;
