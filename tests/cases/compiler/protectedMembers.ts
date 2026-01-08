@@ -1,7 +1,7 @@
 // Class with protected members
 class C1 {
     protected x!: number;
-    protected static sx!: number;
+    protected static sx: number;
     protected f() {
         return this.x;
     }
@@ -23,7 +23,7 @@ class C2 extends C1 {
 // Derived class making protected members public
 class C3 extends C2 {
     x!: number;
-    static sx!: number;
+    static sx: number
     f() {
         return super.f();
     }

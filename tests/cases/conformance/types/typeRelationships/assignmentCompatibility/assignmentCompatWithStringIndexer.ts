@@ -46,8 +46,10 @@ namespace Generics {
         a3 = b3; // error
         b3 = a3; // error
 
-        declare var b4: { [x: string]: Derived2; };
+        var b4: { [x: string]: Derived2; };
         a3 = b4; // error
         b4 = a3; // error
     }
 }
+
+let x!: string = 123

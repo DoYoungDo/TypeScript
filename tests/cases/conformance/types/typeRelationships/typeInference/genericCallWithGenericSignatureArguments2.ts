@@ -64,7 +64,7 @@ namespace TU {
     enum E { A }
     enum F { A }
 
-    function foo3<T>(x: T, a: (x: T) => T, b: (x: any) => any) {
+    function foo3<T>(x: T, a: (x: T) => T, b: (x: U) => U) {
         var r!: (x: T) => T;
         return r;
     }

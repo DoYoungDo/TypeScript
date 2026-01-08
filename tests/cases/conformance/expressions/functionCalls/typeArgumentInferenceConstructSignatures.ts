@@ -95,7 +95,7 @@ interface someGenerics8 {
     new <T>(n: T): T;
 }
 declare var someGenerics8: someGenerics8;
-declare var x = new someGenerics8(someGenerics7);
+var x = new someGenerics8(someGenerics7);
 new x<string, string, string>(null, null, null);
 
 // Generic call with multiple parameters of generic type passed arguments with no best common type
@@ -103,9 +103,9 @@ interface someGenerics9 {
     new <T>(a: T, b: T, c: T): T;
 }
 declare var someGenerics9: someGenerics9;
-declare var a9a = new someGenerics9('', 0, []);
+var a9a = new someGenerics9('', 0, []);
 declare var a9a: {};
-declare var a9b = new someGenerics9<{ a?: number; b?: string; }>({ a: 0 }, { b: '' }, null);
+var a9b = new someGenerics9<{ a?: number; b?: string; }>({ a: 0 }, { b: '' }, null);
 declare var a9b: { a?: number; b?: string; };
 
 // Generic call with multiple parameters of generic type passed arguments with multiple best common types
@@ -117,21 +117,21 @@ interface A92 {
     x: number;
     z?: Window;
 }
-declare var a9e = new someGenerics9(undefined, { x: 6, z: window }, { x: 6, y: '' });
+var a9e = new someGenerics9(undefined, { x: 6, z: window }, { x: 6, y: '' });
 declare var a9e: {};
-declare var a9f = new someGenerics9<A92>(undefined, { x: 6, z: window }, { x: 6, y: '' });
+var a9f = new someGenerics9<A92>(undefined, { x: 6, z: window }, { x: 6, y: '' });
 declare var a9f: A92;
 
 // Generic call with multiple parameters of generic type passed arguments with a single best common type
-declare var a9d = new someGenerics9({ x: 3 }, { x: 6 }, { x: 6 });
+var a9d = new someGenerics9({ x: 3 }, { x: 6 }, { x: 6 });
 declare var a9d: { x: number; };
 
 // Generic call with multiple parameters of generic type where one argument is of type 'any'
 declare var anyVar: any;
-declare var a = new someGenerics9(7, anyVar, 4);
+var a = new someGenerics9(7, anyVar, 4);
 declare var a: any;
 
 // Generic call with multiple parameters of generic type where one argument is [] and the other is not 'any'
-declare var arr = new someGenerics9([], null, undefined);
+var arr = new someGenerics9([], null, undefined);
 declare var arr: any[];
 
