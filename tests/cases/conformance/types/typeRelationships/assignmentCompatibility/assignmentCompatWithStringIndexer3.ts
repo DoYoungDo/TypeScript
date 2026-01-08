@@ -15,8 +15,8 @@ namespace Generics {
     }
    
     function foo<T extends Derived>() {
-        declare var a: A<T>;
-        declare var b: { [x: string]: string; };
+        var a!: A<T>;
+        var b!: { [x: string]: string; };
         a = b; // error
         b = a; // error
     }
