@@ -44,8 +44,8 @@ namespace Generics {
     b2 = a1; // error
 
     function foo<T extends Base>() {
-        declare var b3: { [x: string]: Derived; };
-        declare var a3: A<T>;
+        var b3: { [x: string]: Derived; };
+        var a3: A<T>;
         a3 = b3; // error
         b3 = a3; // error
 
@@ -107,6 +107,8 @@ var Generics;
     a1 = b2; // ok
     b2 = a1; // error
     function foo() {
+        var b3;
+        var a3;
         a3 = b3; // error
         b3 = a3; // error
         a3 = b4; // error

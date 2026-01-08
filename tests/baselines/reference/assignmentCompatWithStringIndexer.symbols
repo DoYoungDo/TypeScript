@@ -124,23 +124,23 @@ namespace Generics {
 >T : Symbol(T, Decl(assignmentCompatWithStringIndexer.ts, 42, 17))
 >Base : Symbol(Base, Decl(assignmentCompatWithStringIndexer.ts, 0, 0))
 
-        declare var b3: { [x: string]: Derived; };
->b3 : Symbol(b3, Decl(assignmentCompatWithStringIndexer.ts, 43, 19))
->x : Symbol(x, Decl(assignmentCompatWithStringIndexer.ts, 43, 27))
+        var b3: { [x: string]: Derived; };
+>b3 : Symbol(b3, Decl(assignmentCompatWithStringIndexer.ts, 43, 11))
+>x : Symbol(x, Decl(assignmentCompatWithStringIndexer.ts, 43, 19))
 >Derived : Symbol(Derived, Decl(assignmentCompatWithStringIndexer.ts, 2, 31))
 
-        declare var a3: A<T>;
->a3 : Symbol(a3, Decl(assignmentCompatWithStringIndexer.ts, 44, 19))
+        var a3: A<T>;
+>a3 : Symbol(a3, Decl(assignmentCompatWithStringIndexer.ts, 44, 11))
 >A : Symbol(A, Decl(assignmentCompatWithStringIndexer.ts, 20, 20))
 >T : Symbol(T, Decl(assignmentCompatWithStringIndexer.ts, 42, 17))
 
         a3 = b3; // error
->a3 : Symbol(a3, Decl(assignmentCompatWithStringIndexer.ts, 44, 19))
->b3 : Symbol(b3, Decl(assignmentCompatWithStringIndexer.ts, 43, 19))
+>a3 : Symbol(a3, Decl(assignmentCompatWithStringIndexer.ts, 44, 11))
+>b3 : Symbol(b3, Decl(assignmentCompatWithStringIndexer.ts, 43, 11))
 
         b3 = a3; // error
->b3 : Symbol(b3, Decl(assignmentCompatWithStringIndexer.ts, 43, 19))
->a3 : Symbol(a3, Decl(assignmentCompatWithStringIndexer.ts, 44, 19))
+>b3 : Symbol(b3, Decl(assignmentCompatWithStringIndexer.ts, 43, 11))
+>a3 : Symbol(a3, Decl(assignmentCompatWithStringIndexer.ts, 44, 11))
 
         declare var b4: { [x: string]: Derived2; };
 >b4 : Symbol(b4, Decl(assignmentCompatWithStringIndexer.ts, 48, 19))
@@ -148,11 +148,11 @@ namespace Generics {
 >Derived2 : Symbol(Derived2, Decl(assignmentCompatWithStringIndexer.ts, 3, 47))
 
         a3 = b4; // error
->a3 : Symbol(a3, Decl(assignmentCompatWithStringIndexer.ts, 44, 19))
+>a3 : Symbol(a3, Decl(assignmentCompatWithStringIndexer.ts, 44, 11))
 >b4 : Symbol(b4, Decl(assignmentCompatWithStringIndexer.ts, 48, 19))
 
         b4 = a3; // error
 >b4 : Symbol(b4, Decl(assignmentCompatWithStringIndexer.ts, 48, 19))
->a3 : Symbol(a3, Decl(assignmentCompatWithStringIndexer.ts, 44, 19))
+>a3 : Symbol(a3, Decl(assignmentCompatWithStringIndexer.ts, 44, 11))
     }
 }

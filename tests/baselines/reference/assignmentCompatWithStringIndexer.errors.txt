@@ -10,8 +10,6 @@ assignmentCompatWithStringIndexer.ts(33,5): error TS2322: Type 'A<Base>' is not 
 assignmentCompatWithStringIndexer.ts(41,5): error TS2322: Type 'A<Base>' is not assignable to type '{ [x: string]: Derived2; }'.
   'string' index signatures are incompatible.
     Type 'Base' is missing the following properties from type 'Derived2': baz, bar
-assignmentCompatWithStringIndexer.ts(44,9): error TS1184: Modifiers cannot appear here.
-assignmentCompatWithStringIndexer.ts(45,9): error TS1184: Modifiers cannot appear here.
 assignmentCompatWithStringIndexer.ts(46,9): error TS2322: Type '{ [x: string]: Derived; }' is not assignable to type 'A<T>'.
   'string' index signatures are incompatible.
     Type 'Derived' is not assignable to type 'T'.
@@ -31,7 +29,7 @@ assignmentCompatWithStringIndexer.ts(51,9): error TS2322: Type 'A<T>' is not ass
       Type 'Base' is missing the following properties from type 'Derived2': baz, bar
 
 
-==== assignmentCompatWithStringIndexer.ts (11 errors) ====
+==== assignmentCompatWithStringIndexer.ts (9 errors) ====
     // index signatures must be compatible in assignments
     
     interface Base { foo: string; }
@@ -93,12 +91,8 @@ assignmentCompatWithStringIndexer.ts(51,9): error TS2322: Type 'A<T>' is not ass
 !!! error TS2322:     Type 'Base' is missing the following properties from type 'Derived2': baz, bar
     
         function foo<T extends Base>() {
-            declare var b3: { [x: string]: Derived; };
-            ~~~~~~~
-!!! error TS1184: Modifiers cannot appear here.
-            declare var a3: A<T>;
-            ~~~~~~~
-!!! error TS1184: Modifiers cannot appear here.
+            var b3: { [x: string]: Derived; };
+            var a3: A<T>;
             a3 = b3; // error
             ~~
 !!! error TS2322: Type '{ [x: string]: Derived; }' is not assignable to type 'A<T>'.

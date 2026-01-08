@@ -159,13 +159,13 @@ namespace Generics {
 >foo : <T extends Base>() => void
 >    : ^ ^^^^^^^^^    ^^^^^^^^^^^
 
-        declare var b3: { [x: string]: Derived; };
+        var b3: { [x: string]: Derived; };
 >b3 : { [x: string]: Derived; }
 >   : ^^^^^^^^^^^^^^^^^^^^^^^^^
 >x : string
 >  : ^^^^^^
 
-        declare var a3: A<T>;
+        var a3: A<T>;
 >a3 : A<T>
 >   : ^^^^
 
