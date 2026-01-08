@@ -261,214 +261,214 @@ namespace GenericSignaturesInvalid {
 >foo : Symbol(foo, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 54, 5))
 >T : Symbol(T, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 57, 17))
 
-        declare var b: Base2;
->b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 19))
+        var b!: Base2;
+>b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 11))
 >Base2 : Symbol(Base2, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 38, 36))
 
-        declare var t: Target<T>;
->t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 19))
+        var t!: Target<T>;
+>t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 11))
 >Target : Symbol(Target, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 46, 5))
 >T : Symbol(T, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 57, 17))
 
         // all errors
         b.a = t.a;
 >b.a : Symbol(Base2.a, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 40, 17))
->b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 19))
+>b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 11))
 >a : Symbol(Base2.a, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 40, 17))
 >t.a : Symbol(Target.a, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 48, 21))
->t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 19))
+>t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 11))
 >a : Symbol(Target.a, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 48, 21))
 
         b.a = t.a2;
 >b.a : Symbol(Base2.a, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 40, 17))
->b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 19))
+>b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 11))
 >a : Symbol(Base2.a, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 40, 17))
 >t.a2 : Symbol(Target.a2, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 49, 19))
->t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 19))
+>t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 11))
 >a2 : Symbol(Target.a2, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 49, 19))
 
         b.a = t.a3;
 >b.a : Symbol(Base2.a, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 40, 17))
->b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 19))
+>b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 11))
 >a : Symbol(Base2.a, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 40, 17))
 >t.a3 : Symbol(Target.a3, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 50, 25))
->t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 19))
+>t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 11))
 >a3 : Symbol(Target.a3, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 50, 25))
 
         b.a = t.a4;
 >b.a : Symbol(Base2.a, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 40, 17))
->b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 19))
+>b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 11))
 >a : Symbol(Base2.a, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 40, 17))
 >t.a4 : Symbol(Target.a4, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 51, 24))
->t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 19))
+>t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 11))
 >a4 : Symbol(Target.a4, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 51, 24))
 
         b.a = t.a5;
 >b.a : Symbol(Base2.a, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 40, 17))
->b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 19))
+>b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 11))
 >a : Symbol(Base2.a, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 40, 17))
 >t.a5 : Symbol(Target.a5, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 52, 31))
->t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 19))
+>t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 11))
 >a5 : Symbol(Target.a5, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 52, 31))
 
         b.a2 = t.a;
 >b.a2 : Symbol(Base2.a2, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 41, 22))
->b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 19))
+>b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 11))
 >a2 : Symbol(Base2.a2, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 41, 22))
 >t.a : Symbol(Target.a, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 48, 21))
->t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 19))
+>t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 11))
 >a : Symbol(Target.a, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 48, 21))
 
         b.a2 = t.a2;
 >b.a2 : Symbol(Base2.a2, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 41, 22))
->b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 19))
+>b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 11))
 >a2 : Symbol(Base2.a2, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 41, 22))
 >t.a2 : Symbol(Target.a2, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 49, 19))
->t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 19))
+>t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 11))
 >a2 : Symbol(Target.a2, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 49, 19))
 
         b.a2 = t.a3;
 >b.a2 : Symbol(Base2.a2, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 41, 22))
->b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 19))
+>b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 11))
 >a2 : Symbol(Base2.a2, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 41, 22))
 >t.a3 : Symbol(Target.a3, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 50, 25))
->t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 19))
+>t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 11))
 >a3 : Symbol(Target.a3, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 50, 25))
 
         b.a2 = t.a4;
 >b.a2 : Symbol(Base2.a2, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 41, 22))
->b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 19))
+>b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 11))
 >a2 : Symbol(Base2.a2, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 41, 22))
 >t.a4 : Symbol(Target.a4, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 51, 24))
->t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 19))
+>t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 11))
 >a4 : Symbol(Target.a4, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 51, 24))
 
         b.a2 = t.a5;
 >b.a2 : Symbol(Base2.a2, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 41, 22))
->b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 19))
+>b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 11))
 >a2 : Symbol(Base2.a2, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 41, 22))
 >t.a5 : Symbol(Target.a5, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 52, 31))
->t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 19))
+>t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 11))
 >a5 : Symbol(Target.a5, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 52, 31))
 
         b.a3 = t.a;
 >b.a3 : Symbol(Base2.a3, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 42, 28))
->b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 19))
+>b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 11))
 >a3 : Symbol(Base2.a3, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 42, 28))
 >t.a : Symbol(Target.a, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 48, 21))
->t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 19))
+>t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 11))
 >a : Symbol(Target.a, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 48, 21))
 
         b.a3 = t.a2;
 >b.a3 : Symbol(Base2.a3, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 42, 28))
->b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 19))
+>b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 11))
 >a3 : Symbol(Base2.a3, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 42, 28))
 >t.a2 : Symbol(Target.a2, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 49, 19))
->t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 19))
+>t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 11))
 >a2 : Symbol(Target.a2, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 49, 19))
 
         b.a3 = t.a3;
 >b.a3 : Symbol(Base2.a3, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 42, 28))
->b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 19))
+>b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 11))
 >a3 : Symbol(Base2.a3, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 42, 28))
 >t.a3 : Symbol(Target.a3, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 50, 25))
->t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 19))
+>t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 11))
 >a3 : Symbol(Target.a3, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 50, 25))
 
         b.a3 = t.a4;
 >b.a3 : Symbol(Base2.a3, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 42, 28))
->b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 19))
+>b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 11))
 >a3 : Symbol(Base2.a3, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 42, 28))
 >t.a4 : Symbol(Target.a4, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 51, 24))
->t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 19))
+>t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 11))
 >a4 : Symbol(Target.a4, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 51, 24))
 
         b.a3 = t.a5;
 >b.a3 : Symbol(Base2.a3, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 42, 28))
->b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 19))
+>b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 11))
 >a3 : Symbol(Base2.a3, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 42, 28))
 >t.a5 : Symbol(Target.a5, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 52, 31))
->t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 19))
+>t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 11))
 >a5 : Symbol(Target.a5, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 52, 31))
 
         b.a4 = t.a;
 >b.a4 : Symbol(Base2.a4, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 43, 27))
->b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 19))
+>b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 11))
 >a4 : Symbol(Base2.a4, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 43, 27))
 >t.a : Symbol(Target.a, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 48, 21))
->t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 19))
+>t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 11))
 >a : Symbol(Target.a, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 48, 21))
 
         b.a4 = t.a2;
 >b.a4 : Symbol(Base2.a4, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 43, 27))
->b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 19))
+>b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 11))
 >a4 : Symbol(Base2.a4, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 43, 27))
 >t.a2 : Symbol(Target.a2, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 49, 19))
->t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 19))
+>t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 11))
 >a2 : Symbol(Target.a2, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 49, 19))
 
         b.a4 = t.a3;
 >b.a4 : Symbol(Base2.a4, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 43, 27))
->b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 19))
+>b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 11))
 >a4 : Symbol(Base2.a4, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 43, 27))
 >t.a3 : Symbol(Target.a3, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 50, 25))
->t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 19))
+>t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 11))
 >a3 : Symbol(Target.a3, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 50, 25))
 
         b.a4 = t.a4;
 >b.a4 : Symbol(Base2.a4, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 43, 27))
->b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 19))
+>b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 11))
 >a4 : Symbol(Base2.a4, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 43, 27))
 >t.a4 : Symbol(Target.a4, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 51, 24))
->t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 19))
+>t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 11))
 >a4 : Symbol(Target.a4, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 51, 24))
 
         b.a4 = t.a5;
 >b.a4 : Symbol(Base2.a4, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 43, 27))
->b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 19))
+>b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 11))
 >a4 : Symbol(Base2.a4, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 43, 27))
 >t.a5 : Symbol(Target.a5, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 52, 31))
->t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 19))
+>t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 11))
 >a5 : Symbol(Target.a5, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 52, 31))
 
         b.a5 = t.a;
 >b.a5 : Symbol(Base2.a5, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 44, 34))
->b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 19))
+>b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 11))
 >a5 : Symbol(Base2.a5, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 44, 34))
 >t.a : Symbol(Target.a, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 48, 21))
->t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 19))
+>t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 11))
 >a : Symbol(Target.a, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 48, 21))
 
         b.a5 = t.a2;
 >b.a5 : Symbol(Base2.a5, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 44, 34))
->b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 19))
+>b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 11))
 >a5 : Symbol(Base2.a5, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 44, 34))
 >t.a2 : Symbol(Target.a2, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 49, 19))
->t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 19))
+>t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 11))
 >a2 : Symbol(Target.a2, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 49, 19))
 
         b.a5 = t.a3;
 >b.a5 : Symbol(Base2.a5, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 44, 34))
->b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 19))
+>b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 11))
 >a5 : Symbol(Base2.a5, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 44, 34))
 >t.a3 : Symbol(Target.a3, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 50, 25))
->t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 19))
+>t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 11))
 >a3 : Symbol(Target.a3, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 50, 25))
 
         b.a5 = t.a4;
 >b.a5 : Symbol(Base2.a5, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 44, 34))
->b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 19))
+>b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 11))
 >a5 : Symbol(Base2.a5, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 44, 34))
 >t.a4 : Symbol(Target.a4, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 51, 24))
->t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 19))
+>t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 11))
 >a4 : Symbol(Target.a4, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 51, 24))
 
         b.a5 = t.a5;
 >b.a5 : Symbol(Base2.a5, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 44, 34))
->b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 19))
+>b : Symbol(b, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 58, 11))
 >a5 : Symbol(Base2.a5, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 44, 34))
 >t.a5 : Symbol(Target.a5, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 52, 31))
->t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 19))
+>t : Symbol(t, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 59, 11))
 >a5 : Symbol(Target.a5, Decl(assignmentCompatWithGenericCallSignaturesWithOptionalParameters.ts, 52, 31))
     }
 }

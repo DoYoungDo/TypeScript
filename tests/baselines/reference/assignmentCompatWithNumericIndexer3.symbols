@@ -82,35 +82,35 @@ namespace Generics {
 >T : Symbol(T, Decl(assignmentCompatWithNumericIndexer3.ts, 29, 17))
 >Derived : Symbol(Derived, Decl(assignmentCompatWithNumericIndexer3.ts, 2, 31))
 
-        declare var a: A<T>;
->a : Symbol(a, Decl(assignmentCompatWithNumericIndexer3.ts, 30, 19))
+        var a!: A<T>;
+>a : Symbol(a, Decl(assignmentCompatWithNumericIndexer3.ts, 30, 11))
 >A : Symbol(A, Decl(assignmentCompatWithNumericIndexer3.ts, 24, 20))
 >T : Symbol(T, Decl(assignmentCompatWithNumericIndexer3.ts, 29, 17))
 
-        declare var b: { [x: number]: Derived; };
->b : Symbol(b, Decl(assignmentCompatWithNumericIndexer3.ts, 31, 19))
->x : Symbol(x, Decl(assignmentCompatWithNumericIndexer3.ts, 31, 26))
+        var b!: { [x: number]: Derived; };
+>b : Symbol(b, Decl(assignmentCompatWithNumericIndexer3.ts, 31, 11))
+>x : Symbol(x, Decl(assignmentCompatWithNumericIndexer3.ts, 31, 19))
 >Derived : Symbol(Derived, Decl(assignmentCompatWithNumericIndexer3.ts, 2, 31))
 
         a = b; // error
->a : Symbol(a, Decl(assignmentCompatWithNumericIndexer3.ts, 30, 19))
->b : Symbol(b, Decl(assignmentCompatWithNumericIndexer3.ts, 31, 19))
+>a : Symbol(a, Decl(assignmentCompatWithNumericIndexer3.ts, 30, 11))
+>b : Symbol(b, Decl(assignmentCompatWithNumericIndexer3.ts, 31, 11))
 
         b = a; // ok
->b : Symbol(b, Decl(assignmentCompatWithNumericIndexer3.ts, 31, 19))
->a : Symbol(a, Decl(assignmentCompatWithNumericIndexer3.ts, 30, 19))
+>b : Symbol(b, Decl(assignmentCompatWithNumericIndexer3.ts, 31, 11))
+>a : Symbol(a, Decl(assignmentCompatWithNumericIndexer3.ts, 30, 11))
 
-        declare var b2: { [x: number]: T; };
->b2 : Symbol(b2, Decl(assignmentCompatWithNumericIndexer3.ts, 35, 19))
->x : Symbol(x, Decl(assignmentCompatWithNumericIndexer3.ts, 35, 27))
+        var b2!: { [x: number]: T; };
+>b2 : Symbol(b2, Decl(assignmentCompatWithNumericIndexer3.ts, 35, 11))
+>x : Symbol(x, Decl(assignmentCompatWithNumericIndexer3.ts, 35, 20))
 >T : Symbol(T, Decl(assignmentCompatWithNumericIndexer3.ts, 29, 17))
 
         a = b2; // ok
->a : Symbol(a, Decl(assignmentCompatWithNumericIndexer3.ts, 30, 19))
->b2 : Symbol(b2, Decl(assignmentCompatWithNumericIndexer3.ts, 35, 19))
+>a : Symbol(a, Decl(assignmentCompatWithNumericIndexer3.ts, 30, 11))
+>b2 : Symbol(b2, Decl(assignmentCompatWithNumericIndexer3.ts, 35, 11))
 
         b2 = a; // ok
->b2 : Symbol(b2, Decl(assignmentCompatWithNumericIndexer3.ts, 35, 19))
->a : Symbol(a, Decl(assignmentCompatWithNumericIndexer3.ts, 30, 19))
+>b2 : Symbol(b2, Decl(assignmentCompatWithNumericIndexer3.ts, 35, 11))
+>a : Symbol(a, Decl(assignmentCompatWithNumericIndexer3.ts, 30, 11))
     }
 }

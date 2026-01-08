@@ -4,16 +4,13 @@ assignmentCompatWithNumericIndexer3.ts(14,1): error TS2322: Type '{ [x: number]:
 assignmentCompatWithNumericIndexer3.ts(23,1): error TS2322: Type 'A' is not assignable to type '{ [x: number]: Derived2; }'.
   'number' index signatures are incompatible.
     Property 'baz' is missing in type 'Derived' but required in type 'Derived2'.
-assignmentCompatWithNumericIndexer3.ts(31,9): error TS1184: Modifiers cannot appear here.
-assignmentCompatWithNumericIndexer3.ts(32,9): error TS1184: Modifiers cannot appear here.
 assignmentCompatWithNumericIndexer3.ts(33,9): error TS2322: Type '{ [x: number]: Derived; }' is not assignable to type 'A<T>'.
   'number' index signatures are incompatible.
     Type 'Derived' is not assignable to type 'T'.
       'Derived' is assignable to the constraint of type 'T', but 'T' could be instantiated with a different subtype of constraint 'Derived'.
-assignmentCompatWithNumericIndexer3.ts(36,9): error TS1184: Modifiers cannot appear here.
 
 
-==== assignmentCompatWithNumericIndexer3.ts (6 errors) ====
+==== assignmentCompatWithNumericIndexer3.ts (3 errors) ====
     // Derived type indexer must be subtype of base type indexer
     
     interface Base { foo: string; }
@@ -54,12 +51,8 @@ assignmentCompatWithNumericIndexer3.ts(36,9): error TS1184: Modifiers cannot app
         }
     
         function foo<T extends Derived>() {
-            declare var a: A<T>;
-            ~~~~~~~
-!!! error TS1184: Modifiers cannot appear here.
-            declare var b: { [x: number]: Derived; };
-            ~~~~~~~
-!!! error TS1184: Modifiers cannot appear here.
+            var a!: A<T>;
+            var b!: { [x: number]: Derived; };
             a = b; // error
             ~
 !!! error TS2322: Type '{ [x: number]: Derived; }' is not assignable to type 'A<T>'.
@@ -68,9 +61,7 @@ assignmentCompatWithNumericIndexer3.ts(36,9): error TS1184: Modifiers cannot app
 !!! error TS2322:       'Derived' is assignable to the constraint of type 'T', but 'T' could be instantiated with a different subtype of constraint 'Derived'.
             b = a; // ok
     
-            declare var b2: { [x: number]: T; };
-            ~~~~~~~
-!!! error TS1184: Modifiers cannot appear here.
+            var b2!: { [x: number]: T; };
             a = b2; // ok
             b2 = a; // ok
         }

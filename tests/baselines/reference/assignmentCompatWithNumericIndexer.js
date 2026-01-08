@@ -30,16 +30,16 @@ namespace Generics {
     }
 
     function foo<T extends Base>() {
-        declare var a: A<T>;
-        declare var b: { [x: number]: Derived; }
+        var a!: A<T>;
+        var b!: { [x: number]: Derived; }
         a = b; // error
         b = a; // error
 
-        declare var b2: { [x: number]: Derived2; }
+        var b2!: { [x: number]: Derived2; }
         a = b2; // error
         b2 = a; // error
 
-        declare var b3: { [x: number]: T; }
+        var b3!: { [x: number]: T; }
         a = b3; // ok
         b3 = a; // ok
     }
@@ -86,10 +86,14 @@ var Generics;
         return B;
     }(A));
     function foo() {
+        var a;
+        var b;
         a = b; // error
         b = a; // error
+        var b2;
         a = b2; // error
         b2 = a; // error
+        var b3;
         a = b3; // ok
         b3 = a; // ok
     }
