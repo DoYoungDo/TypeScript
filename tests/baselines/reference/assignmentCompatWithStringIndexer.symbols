@@ -157,6 +157,3 @@ namespace Generics {
     }
 }
 
-let x!: string = 123
->x : Symbol(x, Decl(assignmentCompatWithStringIndexer.ts, 54, 3))
-

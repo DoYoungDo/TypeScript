@@ -55,7 +55,6 @@ namespace Generics {
     }
 }
 
-let x!: string = 123
 
 //// [assignmentCompatWithStringIndexer.js]
 // index signatures must be compatible in assignments
@@ -118,4 +117,3 @@ var Generics;
         b4 = a3; // error
     }
 })(Generics || (Generics = {}));
-var x = 123;

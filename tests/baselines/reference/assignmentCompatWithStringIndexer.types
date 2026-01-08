@@ -209,9 +209,3 @@ namespace Generics {
     }
 }
 
-let x!: string = 123
->x : string
->  : ^^^^^^
->123 : 123
->    : ^^^
-
