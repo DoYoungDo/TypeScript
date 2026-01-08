@@ -1,9 +1,8 @@
 capturedLetConstInLoop5.ts(174,13): error TS2367: This comparison appears to be unintentional because the types '0' and '1' have no overlap.
 capturedLetConstInLoop5.ts(229,13): error TS2367: This comparison appears to be unintentional because the types '0' and '1' have no overlap.
-capturedLetConstInLoop5.ts(270,12): error TS1123: Variable declaration list cannot be empty.
 
 
-==== capturedLetConstInLoop5.ts (3 errors) ====
+==== capturedLetConstInLoop5.ts (2 errors) ====
     declare function use(a: any);
     
     //====let
@@ -277,9 +276,6 @@ capturedLetConstInLoop5.ts(270,12): error TS1123: Variable declaration list cann
     function foo8_c(x) {
         for (const y = 0; y < 1;) {
             const x = 1;
-            var
-               
-!!! error TS1123: Variable declaration list cannot be empty.
             var v = x;
             (function() { return x + y + v });
             (() => x + y + v);

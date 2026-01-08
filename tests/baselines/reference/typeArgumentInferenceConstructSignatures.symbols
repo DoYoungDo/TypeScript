@@ -344,13 +344,13 @@ declare var someGenerics8: someGenerics8;
 >someGenerics8 : Symbol(someGenerics8, Decl(typeArgumentInferenceConstructSignatures.ts, 90, 96), Decl(typeArgumentInferenceConstructSignatures.ts, 96, 11))
 >someGenerics8 : Symbol(someGenerics8, Decl(typeArgumentInferenceConstructSignatures.ts, 90, 96), Decl(typeArgumentInferenceConstructSignatures.ts, 96, 11))
 
-declare var x = new someGenerics8(someGenerics7);
->x : Symbol(x, Decl(typeArgumentInferenceConstructSignatures.ts, 97, 11))
+var x = new someGenerics8(someGenerics7);
+>x : Symbol(x, Decl(typeArgumentInferenceConstructSignatures.ts, 97, 3))
 >someGenerics8 : Symbol(someGenerics8, Decl(typeArgumentInferenceConstructSignatures.ts, 90, 96), Decl(typeArgumentInferenceConstructSignatures.ts, 96, 11))
 >someGenerics7 : Symbol(someGenerics7, Decl(typeArgumentInferenceConstructSignatures.ts, 81, 80), Decl(typeArgumentInferenceConstructSignatures.ts, 87, 11))
 
 new x<string, string, string>(null, null, null);
->x : Symbol(x, Decl(typeArgumentInferenceConstructSignatures.ts, 97, 11))
+>x : Symbol(x, Decl(typeArgumentInferenceConstructSignatures.ts, 97, 3))
 
 // Generic call with multiple parameters of generic type passed arguments with no best common type
 interface someGenerics9 {
@@ -370,23 +370,23 @@ declare var someGenerics9: someGenerics9;
 >someGenerics9 : Symbol(someGenerics9, Decl(typeArgumentInferenceConstructSignatures.ts, 98, 48), Decl(typeArgumentInferenceConstructSignatures.ts, 104, 11))
 >someGenerics9 : Symbol(someGenerics9, Decl(typeArgumentInferenceConstructSignatures.ts, 98, 48), Decl(typeArgumentInferenceConstructSignatures.ts, 104, 11))
 
-declare var a9a = new someGenerics9('', 0, []);
->a9a : Symbol(a9a, Decl(typeArgumentInferenceConstructSignatures.ts, 105, 11), Decl(typeArgumentInferenceConstructSignatures.ts, 106, 11))
+var a9a = new someGenerics9('', 0, []);
+>a9a : Symbol(a9a, Decl(typeArgumentInferenceConstructSignatures.ts, 105, 3), Decl(typeArgumentInferenceConstructSignatures.ts, 106, 11))
 >someGenerics9 : Symbol(someGenerics9, Decl(typeArgumentInferenceConstructSignatures.ts, 98, 48), Decl(typeArgumentInferenceConstructSignatures.ts, 104, 11))
 
 declare var a9a: {};
->a9a : Symbol(a9a, Decl(typeArgumentInferenceConstructSignatures.ts, 105, 11), Decl(typeArgumentInferenceConstructSignatures.ts, 106, 11))
+>a9a : Symbol(a9a, Decl(typeArgumentInferenceConstructSignatures.ts, 105, 3), Decl(typeArgumentInferenceConstructSignatures.ts, 106, 11))
 
-declare var a9b = new someGenerics9<{ a?: number; b?: string; }>({ a: 0 }, { b: '' }, null);
->a9b : Symbol(a9b, Decl(typeArgumentInferenceConstructSignatures.ts, 107, 11), Decl(typeArgumentInferenceConstructSignatures.ts, 108, 11))
+var a9b = new someGenerics9<{ a?: number; b?: string; }>({ a: 0 }, { b: '' }, null);
+>a9b : Symbol(a9b, Decl(typeArgumentInferenceConstructSignatures.ts, 107, 3), Decl(typeArgumentInferenceConstructSignatures.ts, 108, 11))
 >someGenerics9 : Symbol(someGenerics9, Decl(typeArgumentInferenceConstructSignatures.ts, 98, 48), Decl(typeArgumentInferenceConstructSignatures.ts, 104, 11))
->a : Symbol(a, Decl(typeArgumentInferenceConstructSignatures.ts, 107, 37))
->b : Symbol(b, Decl(typeArgumentInferenceConstructSignatures.ts, 107, 49))
->a : Symbol(a, Decl(typeArgumentInferenceConstructSignatures.ts, 107, 66))
->b : Symbol(b, Decl(typeArgumentInferenceConstructSignatures.ts, 107, 76))
+>a : Symbol(a, Decl(typeArgumentInferenceConstructSignatures.ts, 107, 29))
+>b : Symbol(b, Decl(typeArgumentInferenceConstructSignatures.ts, 107, 41))
+>a : Symbol(a, Decl(typeArgumentInferenceConstructSignatures.ts, 107, 58))
+>b : Symbol(b, Decl(typeArgumentInferenceConstructSignatures.ts, 107, 68))
 
 declare var a9b: { a?: number; b?: string; };
->a9b : Symbol(a9b, Decl(typeArgumentInferenceConstructSignatures.ts, 107, 11), Decl(typeArgumentInferenceConstructSignatures.ts, 108, 11))
+>a9b : Symbol(a9b, Decl(typeArgumentInferenceConstructSignatures.ts, 107, 3), Decl(typeArgumentInferenceConstructSignatures.ts, 108, 11))
 >a : Symbol(a, Decl(typeArgumentInferenceConstructSignatures.ts, 108, 18))
 >b : Symbol(b, Decl(typeArgumentInferenceConstructSignatures.ts, 108, 30))
 
@@ -410,65 +410,65 @@ interface A92 {
 >z : Symbol(A92.z, Decl(typeArgumentInferenceConstructSignatures.ts, 116, 14))
 >Window : Symbol(Window, Decl(lib.dom.d.ts, --, --), Decl(lib.dom.d.ts, --, --))
 }
-declare var a9e = new someGenerics9(undefined, { x: 6, z: window }, { x: 6, y: '' });
->a9e : Symbol(a9e, Decl(typeArgumentInferenceConstructSignatures.ts, 119, 11), Decl(typeArgumentInferenceConstructSignatures.ts, 120, 11))
+var a9e = new someGenerics9(undefined, { x: 6, z: window }, { x: 6, y: '' });
+>a9e : Symbol(a9e, Decl(typeArgumentInferenceConstructSignatures.ts, 119, 3), Decl(typeArgumentInferenceConstructSignatures.ts, 120, 11))
 >someGenerics9 : Symbol(someGenerics9, Decl(typeArgumentInferenceConstructSignatures.ts, 98, 48), Decl(typeArgumentInferenceConstructSignatures.ts, 104, 11))
 >undefined : Symbol(undefined)
->x : Symbol(x, Decl(typeArgumentInferenceConstructSignatures.ts, 119, 48))
->z : Symbol(z, Decl(typeArgumentInferenceConstructSignatures.ts, 119, 54))
+>x : Symbol(x, Decl(typeArgumentInferenceConstructSignatures.ts, 119, 40))
+>z : Symbol(z, Decl(typeArgumentInferenceConstructSignatures.ts, 119, 46))
 >window : Symbol(window, Decl(lib.dom.d.ts, --, --))
->x : Symbol(x, Decl(typeArgumentInferenceConstructSignatures.ts, 119, 69))
->y : Symbol(y, Decl(typeArgumentInferenceConstructSignatures.ts, 119, 75))
+>x : Symbol(x, Decl(typeArgumentInferenceConstructSignatures.ts, 119, 61))
+>y : Symbol(y, Decl(typeArgumentInferenceConstructSignatures.ts, 119, 67))
 
 declare var a9e: {};
->a9e : Symbol(a9e, Decl(typeArgumentInferenceConstructSignatures.ts, 119, 11), Decl(typeArgumentInferenceConstructSignatures.ts, 120, 11))
+>a9e : Symbol(a9e, Decl(typeArgumentInferenceConstructSignatures.ts, 119, 3), Decl(typeArgumentInferenceConstructSignatures.ts, 120, 11))
 
-declare var a9f = new someGenerics9<A92>(undefined, { x: 6, z: window }, { x: 6, y: '' });
->a9f : Symbol(a9f, Decl(typeArgumentInferenceConstructSignatures.ts, 121, 11), Decl(typeArgumentInferenceConstructSignatures.ts, 122, 11))
+var a9f = new someGenerics9<A92>(undefined, { x: 6, z: window }, { x: 6, y: '' });
+>a9f : Symbol(a9f, Decl(typeArgumentInferenceConstructSignatures.ts, 121, 3), Decl(typeArgumentInferenceConstructSignatures.ts, 122, 11))
 >someGenerics9 : Symbol(someGenerics9, Decl(typeArgumentInferenceConstructSignatures.ts, 98, 48), Decl(typeArgumentInferenceConstructSignatures.ts, 104, 11))
 >A92 : Symbol(A92, Decl(typeArgumentInferenceConstructSignatures.ts, 114, 1))
 >undefined : Symbol(undefined)
->x : Symbol(x, Decl(typeArgumentInferenceConstructSignatures.ts, 121, 53))
->z : Symbol(z, Decl(typeArgumentInferenceConstructSignatures.ts, 121, 59))
+>x : Symbol(x, Decl(typeArgumentInferenceConstructSignatures.ts, 121, 45))
+>z : Symbol(z, Decl(typeArgumentInferenceConstructSignatures.ts, 121, 51))
 >window : Symbol(window, Decl(lib.dom.d.ts, --, --))
->x : Symbol(x, Decl(typeArgumentInferenceConstructSignatures.ts, 121, 74))
->y : Symbol(y, Decl(typeArgumentInferenceConstructSignatures.ts, 121, 80))
+>x : Symbol(x, Decl(typeArgumentInferenceConstructSignatures.ts, 121, 66))
+>y : Symbol(y, Decl(typeArgumentInferenceConstructSignatures.ts, 121, 72))
 
 declare var a9f: A92;
->a9f : Symbol(a9f, Decl(typeArgumentInferenceConstructSignatures.ts, 121, 11), Decl(typeArgumentInferenceConstructSignatures.ts, 122, 11))
+>a9f : Symbol(a9f, Decl(typeArgumentInferenceConstructSignatures.ts, 121, 3), Decl(typeArgumentInferenceConstructSignatures.ts, 122, 11))
 >A92 : Symbol(A92, Decl(typeArgumentInferenceConstructSignatures.ts, 114, 1))
 
 // Generic call with multiple parameters of generic type passed arguments with a single best common type
-declare var a9d = new someGenerics9({ x: 3 }, { x: 6 }, { x: 6 });
->a9d : Symbol(a9d, Decl(typeArgumentInferenceConstructSignatures.ts, 125, 11), Decl(typeArgumentInferenceConstructSignatures.ts, 126, 11))
+var a9d = new someGenerics9({ x: 3 }, { x: 6 }, { x: 6 });
+>a9d : Symbol(a9d, Decl(typeArgumentInferenceConstructSignatures.ts, 125, 3), Decl(typeArgumentInferenceConstructSignatures.ts, 126, 11))
 >someGenerics9 : Symbol(someGenerics9, Decl(typeArgumentInferenceConstructSignatures.ts, 98, 48), Decl(typeArgumentInferenceConstructSignatures.ts, 104, 11))
->x : Symbol(x, Decl(typeArgumentInferenceConstructSignatures.ts, 125, 37))
->x : Symbol(x, Decl(typeArgumentInferenceConstructSignatures.ts, 125, 47))
->x : Symbol(x, Decl(typeArgumentInferenceConstructSignatures.ts, 125, 57))
+>x : Symbol(x, Decl(typeArgumentInferenceConstructSignatures.ts, 125, 29))
+>x : Symbol(x, Decl(typeArgumentInferenceConstructSignatures.ts, 125, 39))
+>x : Symbol(x, Decl(typeArgumentInferenceConstructSignatures.ts, 125, 49))
 
 declare var a9d: { x: number; };
->a9d : Symbol(a9d, Decl(typeArgumentInferenceConstructSignatures.ts, 125, 11), Decl(typeArgumentInferenceConstructSignatures.ts, 126, 11))
+>a9d : Symbol(a9d, Decl(typeArgumentInferenceConstructSignatures.ts, 125, 3), Decl(typeArgumentInferenceConstructSignatures.ts, 126, 11))
 >x : Symbol(x, Decl(typeArgumentInferenceConstructSignatures.ts, 126, 18))
 
 // Generic call with multiple parameters of generic type where one argument is of type 'any'
 declare var anyVar: any;
 >anyVar : Symbol(anyVar, Decl(typeArgumentInferenceConstructSignatures.ts, 129, 11))
 
-declare var a = new someGenerics9(7, anyVar, 4);
->a : Symbol(a, Decl(typeArgumentInferenceConstructSignatures.ts, 130, 11), Decl(typeArgumentInferenceConstructSignatures.ts, 131, 11))
+var a = new someGenerics9(7, anyVar, 4);
+>a : Symbol(a, Decl(typeArgumentInferenceConstructSignatures.ts, 130, 3), Decl(typeArgumentInferenceConstructSignatures.ts, 131, 11))
 >someGenerics9 : Symbol(someGenerics9, Decl(typeArgumentInferenceConstructSignatures.ts, 98, 48), Decl(typeArgumentInferenceConstructSignatures.ts, 104, 11))
 >anyVar : Symbol(anyVar, Decl(typeArgumentInferenceConstructSignatures.ts, 129, 11))
 
 declare var a: any;
->a : Symbol(a, Decl(typeArgumentInferenceConstructSignatures.ts, 130, 11), Decl(typeArgumentInferenceConstructSignatures.ts, 131, 11))
+>a : Symbol(a, Decl(typeArgumentInferenceConstructSignatures.ts, 130, 3), Decl(typeArgumentInferenceConstructSignatures.ts, 131, 11))
 
 // Generic call with multiple parameters of generic type where one argument is [] and the other is not 'any'
-declare var arr = new someGenerics9([], null, undefined);
->arr : Symbol(arr, Decl(typeArgumentInferenceConstructSignatures.ts, 134, 11), Decl(typeArgumentInferenceConstructSignatures.ts, 135, 11))
+var arr = new someGenerics9([], null, undefined);
+>arr : Symbol(arr, Decl(typeArgumentInferenceConstructSignatures.ts, 134, 3), Decl(typeArgumentInferenceConstructSignatures.ts, 135, 11))
 >someGenerics9 : Symbol(someGenerics9, Decl(typeArgumentInferenceConstructSignatures.ts, 98, 48), Decl(typeArgumentInferenceConstructSignatures.ts, 104, 11))
 >undefined : Symbol(undefined)
 
 declare var arr: any[];
->arr : Symbol(arr, Decl(typeArgumentInferenceConstructSignatures.ts, 134, 11), Decl(typeArgumentInferenceConstructSignatures.ts, 135, 11))
+>arr : Symbol(arr, Decl(typeArgumentInferenceConstructSignatures.ts, 134, 3), Decl(typeArgumentInferenceConstructSignatures.ts, 135, 11))
 
 

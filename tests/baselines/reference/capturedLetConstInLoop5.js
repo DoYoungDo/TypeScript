@@ -270,7 +270,6 @@ function foo7_c(x) {
 function foo8_c(x) {
     for (const y = 0; y < 1;) {
         const x = 1;
-        var
         var v = x;
         (function() { return x + y + v });
         (() => x + y + v);

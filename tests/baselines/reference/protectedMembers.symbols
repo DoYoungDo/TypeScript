@@ -8,11 +8,11 @@ class C1 {
     protected x!: number;
 >x : Symbol(C1.x, Decl(protectedMembers.ts, 1, 10))
 
-    protected static sx!: number;
+    protected static sx: number;
 >sx : Symbol(C1.sx, Decl(protectedMembers.ts, 2, 25))
 
     protected f() {
->f : Symbol(C1.f, Decl(protectedMembers.ts, 3, 33))
+>f : Symbol(C1.f, Decl(protectedMembers.ts, 3, 32))
 
         return this.x;
 >this.x : Symbol(C1.x, Decl(protectedMembers.ts, 1, 10))
@@ -38,9 +38,9 @@ class C2 extends C1 {
 >f : Symbol(C2.f, Decl(protectedMembers.ts, 13, 21))
 
         return super.f() + this.x;
->super.f : Symbol(C1.f, Decl(protectedMembers.ts, 3, 33))
+>super.f : Symbol(C1.f, Decl(protectedMembers.ts, 3, 32))
 >super : Symbol(C1, Decl(protectedMembers.ts, 0, 0))
->f : Symbol(C1.f, Decl(protectedMembers.ts, 3, 33))
+>f : Symbol(C1.f, Decl(protectedMembers.ts, 3, 32))
 >this.x : Symbol(C1.x, Decl(protectedMembers.ts, 1, 10))
 >this : Symbol(C2, Decl(protectedMembers.ts, 10, 1))
 >x : Symbol(C1.x, Decl(protectedMembers.ts, 1, 10))
@@ -66,11 +66,11 @@ class C3 extends C2 {
     x!: number;
 >x : Symbol(C3.x, Decl(protectedMembers.ts, 23, 21))
 
-    static sx!: number;
+    static sx: number
 >sx : Symbol(C3.sx, Decl(protectedMembers.ts, 24, 15))
 
     f() {
->f : Symbol(C3.f, Decl(protectedMembers.ts, 25, 23))
+>f : Symbol(C3.f, Decl(protectedMembers.ts, 25, 21))
 
         return super.f();
 >super.f : Symbol(C2.f, Decl(protectedMembers.ts, 13, 21))
@@ -106,9 +106,9 @@ c1.x;
 >x : Symbol(C1.x, Decl(protectedMembers.ts, 1, 10))
 
 c1.f();
->c1.f : Symbol(C1.f, Decl(protectedMembers.ts, 3, 33))
+>c1.f : Symbol(C1.f, Decl(protectedMembers.ts, 3, 32))
 >c1 : Symbol(c1, Decl(protectedMembers.ts, 34, 11))
->f : Symbol(C1.f, Decl(protectedMembers.ts, 3, 33))
+>f : Symbol(C1.f, Decl(protectedMembers.ts, 3, 32))
 
 C1.sx;
 >C1.sx : Symbol(C1.sx, Decl(protectedMembers.ts, 2, 25))
@@ -148,9 +148,9 @@ c3.x;
 >x : Symbol(C3.x, Decl(protectedMembers.ts, 23, 21))
 
 c3.f();
->c3.f : Symbol(C3.f, Decl(protectedMembers.ts, 25, 23))
+>c3.f : Symbol(C3.f, Decl(protectedMembers.ts, 25, 21))
 >c3 : Symbol(c3, Decl(protectedMembers.ts, 36, 11))
->f : Symbol(C3.f, Decl(protectedMembers.ts, 25, 23))
+>f : Symbol(C3.f, Decl(protectedMembers.ts, 25, 21))
 
 C3.sx;
 >C3.sx : Symbol(C3.sx, Decl(protectedMembers.ts, 24, 15))

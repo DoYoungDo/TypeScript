@@ -1,11 +1,14 @@
+asiPreventsParsingAsInterface05.ts(3,5): error TS1212: Identifier expected. 'interface' is a reserved word in strict mode.
 asiPreventsParsingAsInterface05.ts(10,1): error TS1212: Identifier expected. 'interface' is a reserved word in strict mode.
 asiPreventsParsingAsInterface05.ts(11,1): error TS2304: Cannot find name 'I'.
 
 
-==== asiPreventsParsingAsInterface05.ts (2 errors) ====
+==== asiPreventsParsingAsInterface05.ts (3 errors) ====
     "use strict"
     
-    declare var interface: number;
+    var interface: number = 123;
+        ~~~~~~~~~
+!!! error TS1212: Identifier expected. 'interface' is a reserved word in strict mode.
     
     // 'interface' is a strict mode reserved word, and so it would be permissible
     // to allow 'interface' and the name of the interface to be on separate lines;

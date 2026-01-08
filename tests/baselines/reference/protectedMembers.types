@@ -10,7 +10,7 @@ class C1 {
 >x : number
 >  : ^^^^^^
 
-    protected static sx!: number;
+    protected static sx: number;
 >sx : number
 >   : ^^^^^^
 
@@ -104,7 +104,7 @@ class C3 extends C2 {
 >x : number
 >  : ^^^^^^
 
-    static sx!: number;
+    static sx: number
 >sx : number
 >   : ^^^^^^
 

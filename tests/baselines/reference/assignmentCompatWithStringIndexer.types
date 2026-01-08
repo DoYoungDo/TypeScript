@@ -185,7 +185,7 @@ namespace Generics {
 >a3 : A<T>
 >   : ^^^^
 
-        declare var b4: { [x: string]: Derived2; };
+        var b4: { [x: string]: Derived2; };
 >b4 : { [x: string]: Derived2; }
 >   : ^^^^^^^^^^^^^^^^^^^^^^^^^^
 >x : string
@@ -208,3 +208,10 @@ namespace Generics {
 >   : ^^^^
     }
 }
+
+let x!: string = 123
+>x : string
+>  : ^^^^^^
+>123 : 123
+>    : ^^^
+

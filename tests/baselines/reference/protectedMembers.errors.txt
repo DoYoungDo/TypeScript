@@ -1,5 +1,3 @@
-protectedMembers.ts(4,24): error TS1255: A definite assignment assertion '!' is not permitted in this context.
-protectedMembers.ts(26,14): error TS1255: A definite assignment assertion '!' is not permitted in this context.
 protectedMembers.ts(40,4): error TS2445: Property 'x' is protected and only accessible within class 'C1' and its subclasses.
 protectedMembers.ts(41,4): error TS2445: Property 'f' is protected and only accessible within class 'C1' and its subclasses.
 protectedMembers.ts(42,4): error TS2445: Property 'sx' is protected and only accessible within class 'C1' and its subclasses.
@@ -18,13 +16,11 @@ protectedMembers.ts(111,7): error TS2415: Class 'B3' incorrectly extends base cl
   Property 'x' is protected in type 'B3' but public in type 'A3'.
 
 
-==== protectedMembers.ts (15 errors) ====
+==== protectedMembers.ts (13 errors) ====
     // Class with protected members
     class C1 {
         protected x!: number;
-        protected static sx!: number;
-                           ~
-!!! error TS1255: A definite assignment assertion '!' is not permitted in this context.
+        protected static sx: number;
         protected f() {
             return this.x;
         }
@@ -46,9 +42,7 @@ protectedMembers.ts(111,7): error TS2415: Class 'B3' incorrectly extends base cl
     // Derived class making protected members public
     class C3 extends C2 {
         x!: number;
-        static sx!: number;
-                 ~
-!!! error TS1255: A definite assignment assertion '!' is not permitted in this context.
+        static sx: number
         f() {
             return super.f();
         }

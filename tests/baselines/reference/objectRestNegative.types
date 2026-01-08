@@ -83,13 +83,11 @@ function generic<T extends { x, y }>(t: T) {
 >     : ^^^^^^^^^^^^
 }
 
-let rest: { b: string } = { b: "" }
+let rest: { b: string } = { b: "" };
 >rest : { b: string; }
 >     : ^^^^^      ^^^
 >b : string
 >  : ^^^^^^
->{ b: "" }({a, ...rest.b + rest.b} = o) : any
->                                       : ^^^
 >{ b: "" } : { b: string; }
 >          : ^^^^^^^^^^^^^^
 >b : string
@@ -98,6 +96,8 @@ let rest: { b: string } = { b: "" }
 >   : ^^
 
 ({a, ...rest.b + rest.b} = o);
+>({a, ...rest.b + rest.b} = o) : { a: number; b: string; }
+>                              : ^^^^^^^^^^^^^^^^^^^^^^^^^
 >{a, ...rest.b + rest.b} = o : { a: number; b: string; }
 >                            : ^^^^^^^^^^^^^^^^^^^^^^^^^
 >{a, ...rest.b + rest.b} : any

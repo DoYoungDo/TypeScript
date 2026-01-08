@@ -142,17 +142,21 @@ namespace Generics {
 >b3 : Symbol(b3, Decl(assignmentCompatWithStringIndexer.ts, 43, 11))
 >a3 : Symbol(a3, Decl(assignmentCompatWithStringIndexer.ts, 44, 11))
 
-        declare var b4: { [x: string]: Derived2; };
->b4 : Symbol(b4, Decl(assignmentCompatWithStringIndexer.ts, 48, 19))
->x : Symbol(x, Decl(assignmentCompatWithStringIndexer.ts, 48, 27))
+        var b4: { [x: string]: Derived2; };
+>b4 : Symbol(b4, Decl(assignmentCompatWithStringIndexer.ts, 48, 11))
+>x : Symbol(x, Decl(assignmentCompatWithStringIndexer.ts, 48, 19))
 >Derived2 : Symbol(Derived2, Decl(assignmentCompatWithStringIndexer.ts, 3, 47))
 
         a3 = b4; // error
 >a3 : Symbol(a3, Decl(assignmentCompatWithStringIndexer.ts, 44, 11))
->b4 : Symbol(b4, Decl(assignmentCompatWithStringIndexer.ts, 48, 19))
+>b4 : Symbol(b4, Decl(assignmentCompatWithStringIndexer.ts, 48, 11))
 
         b4 = a3; // error
->b4 : Symbol(b4, Decl(assignmentCompatWithStringIndexer.ts, 48, 19))
+>b4 : Symbol(b4, Decl(assignmentCompatWithStringIndexer.ts, 48, 11))
 >a3 : Symbol(a3, Decl(assignmentCompatWithStringIndexer.ts, 44, 11))
     }
 }
+
+let x!: string = 123
+>x : Symbol(x, Decl(assignmentCompatWithStringIndexer.ts, 54, 3))
+

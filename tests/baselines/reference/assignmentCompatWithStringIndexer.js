@@ -49,11 +49,13 @@ namespace Generics {
         a3 = b3; // error
         b3 = a3; // error
 
-        declare var b4: { [x: string]: Derived2; };
+        var b4: { [x: string]: Derived2; };
         a3 = b4; // error
         b4 = a3; // error
     }
 }
+
+let x!: string = 123
 
 //// [assignmentCompatWithStringIndexer.js]
 // index signatures must be compatible in assignments
@@ -111,7 +113,9 @@ var Generics;
         var a3;
         a3 = b3; // error
         b3 = a3; // error
+        var b4;
         a3 = b4; // error
         b4 = a3; // error
     }
 })(Generics || (Generics = {}));
+var x = 123;
