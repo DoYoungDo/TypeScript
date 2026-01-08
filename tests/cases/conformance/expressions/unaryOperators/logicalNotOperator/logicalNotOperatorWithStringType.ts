@@ -8,7 +8,7 @@ class A {
     public a!: string;
     static foo() { return ""; }
 }
-module M {
+namespace M {
     export declare var n: string;
 }
 

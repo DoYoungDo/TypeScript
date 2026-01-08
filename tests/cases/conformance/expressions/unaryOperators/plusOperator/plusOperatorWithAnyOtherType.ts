@@ -17,7 +17,7 @@ class A {
         return a;
     }
 }
-module M {
+namespace M {
     export var n: any = undefined;
 }
 var objA = new A();

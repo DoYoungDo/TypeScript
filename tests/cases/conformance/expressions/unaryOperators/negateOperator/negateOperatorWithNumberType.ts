@@ -8,7 +8,7 @@ class A {
     public a!: number;
     static foo() { return 1; }
 }
-module M {
+namespace M {
     export declare var n: number;
 }
 
